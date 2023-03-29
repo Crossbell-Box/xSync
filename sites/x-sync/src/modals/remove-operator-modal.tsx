@@ -75,7 +75,7 @@ export function RemoveOperatorModal() {
 				switch (scene) {
 					case Scene.wannaRemoveTips:
 						return (
-							<div className="p-24px w-312px">
+							<div className="p-24px">
 								<h4 className="text-24px font-400 leading-32px m-0 mb-16px">
 									Turn xSync off
 								</h4>
