@@ -6,6 +6,7 @@ import React from "react";
 import { StaticImageData } from "next/image";
 import { showNotification } from "@mantine/notifications";
 import dayjs from "dayjs";
+import { useAddress } from "@crossbell/contract";
 
 import {
 	useAccountCharacter,
@@ -61,6 +62,7 @@ export function PlatformCard({
 	const character = useAccountCharacter();
 	const hasPermissions = useCharacterSyncOperatorHasPermissions();
 	const contract = useContract();
+	const address = useAddress();
 
 	const syncAccount = useSyncAccount(
 		character?.characterId,
@@ -101,7 +103,7 @@ export function PlatformCard({
 						if (isBound) {
 							openUnbindingModal(platform, identity!);
 						} else {
-							openBindingModal(platform, contract);
+							openBindingModal(platform, contract, address);
 						}
 					}}
 				>

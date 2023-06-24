@@ -1,6 +1,6 @@
 import React from "react";
 import compact from "lodash.compact";
-import { AchievementItem, CharacterEntity, Indexer } from "crossbell.js";
+import { AchievementItem, CharacterEntity, Indexer } from "crossbell";
 import {
 	QueryStatus,
 	useMutation,

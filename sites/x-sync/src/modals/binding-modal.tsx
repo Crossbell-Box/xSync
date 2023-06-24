@@ -11,7 +11,7 @@ import { closeAllModals } from "@mantine/modals";
 import { useClickOutside } from "@mantine/hooks";
 import React from "react";
 import classNames from "classnames";
-import { Contract } from "crossbell.js";
+import { Contract } from "crossbell";
 
 import { Image } from "~/shared/components/image";
 import { openBorderlessModal } from "~/shared/components/modal";
@@ -35,6 +35,7 @@ import {
 	openPlatformSite,
 } from "../utils";
 import { BIO_IMAGE_MAP, NAME_IMAGE_MAP } from "./binding-modal.images";
+import { Address } from "wagmi";
 
 const closeModals = () => closeAllModals();
 
@@ -43,12 +44,13 @@ const tooltipZIndex = modalZIndex + 1;
 
 export function openBindingModal(
 	platform: SupportedPlatform,
-	contract: Contract
+	contract: Contract,
+	address: Address | null
 ) {
 	openBorderlessModal({
 		zIndex: modalZIndex,
 		children: (
-			<ContractProvider contract={contract}>
+			<ContractProvider address={address} contract={contract}>
 				<BindingModal platform={platform} />
 			</ContractProvider>
 		),
