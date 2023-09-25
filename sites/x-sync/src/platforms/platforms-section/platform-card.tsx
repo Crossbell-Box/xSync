@@ -25,6 +25,7 @@ import { formatDate } from "~/shared/time";
 import { useContract } from "@crossbell/contract";
 
 import bindIllustration from "@/public/images/sync/bind-illustration.png";
+import { openTwitterUnavailableNoticeModal } from "@/modals/twitter-unavailable-notice-modal";
 
 export type PlatformCardProps = {
 	isBound: boolean;
@@ -100,7 +101,9 @@ export function PlatformCard({
 					)}
 					disabled={disableBtn}
 					onClick={() => {
-						if (isBound) {
+						if (platform === "twitter") {
+							openTwitterUnavailableNoticeModal();
+						} else if (isBound) {
 							openUnbindingModal(platform, identity!);
 						} else {
 							openBindingModal(platform, contract, address);
