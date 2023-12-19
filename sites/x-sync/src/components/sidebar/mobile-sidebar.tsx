@@ -30,7 +30,7 @@ export function MobileSidebar() {
 								"flex items-center justify-center px-16px py-8px bg-[#FFF] text-[#000] rounded-12px gap-[10px] border-1 border-[#D1D9F0] ux-overlay transition",
 								isBurgerOpened
 									? "opacity-0 pointer-events-none"
-									: "opacity-100 pointer-events-auto"
+									: "opacity-100 pointer-events-auto",
 							)}
 						>
 							<Text className="truncate text-18px font-roboto font-600">
@@ -50,7 +50,7 @@ export function MobileSidebar() {
 						"bg-[#FFF] flex-grow-1 transition flex flex-col items-center transform",
 						isBurgerOpened
 							? "opacity-100 pointer-events-auto translate-y-0"
-							: "opacity-0 pointer-events-none -translate-y-1/10"
+							: "opacity-0 pointer-events-none -translate-y-1/10",
 					)}
 				>
 					<ul className="flex flex-col items-center list-none p-0 m-0 mt-120px">

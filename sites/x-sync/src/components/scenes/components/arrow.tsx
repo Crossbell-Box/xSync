@@ -15,7 +15,7 @@ export const Arrow = ({ direction, className, ...props }: ArrowProps) => (
 		className={classNames(
 			"transform",
 			direction === "left" && "rotate-180",
-			className
+			className,
 		)}
 		{...props}
 	>

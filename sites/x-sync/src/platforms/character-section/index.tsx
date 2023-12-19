@@ -21,7 +21,7 @@ export default function CharacterSection() {
 	const { data: mediaUsage } = useCharacterMediaUsage(account?.characterId);
 	const characterName = React.useMemo(
 		() => extractCharacterName(character),
-		[character]
+		[character],
 	);
 
 	const { toggleOperator, hasPermissions, isTogglingOperator } =
@@ -39,7 +39,7 @@ export default function CharacterSection() {
 				<button
 					className={classNames(
 						"ml-1px transform -translate-y-2/3",
-						"text-16px bg-transparent border-none outline-none color-black p-0 cursor-pointer"
+						"text-16px bg-transparent border-none outline-none color-black p-0 cursor-pointer",
 					)}
 					onClick={openGuideModal}
 				>

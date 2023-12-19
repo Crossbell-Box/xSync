@@ -64,6 +64,6 @@ export function useTrending<T extends AvailableType>(type: T) {
 			getNextPageParam: (response) => response.cursorId,
 			refetchOnWindowFocus: false, // to prevent random refresh
 			refetchOnMount: false, // to prevent random refresh
-		}
+		},
 	);
 }

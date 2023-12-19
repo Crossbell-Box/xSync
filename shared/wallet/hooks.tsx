@@ -32,7 +32,7 @@ export function useLoginChecker() {
 
 			connectModal.show();
 			return false;
-		}
+		},
 	);
 
 	return { validate };

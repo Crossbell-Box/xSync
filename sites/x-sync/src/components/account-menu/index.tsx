@@ -73,7 +73,7 @@ export function AccountMenu({
 				</Modal>
 				{React.cloneElement(
 					children as React.DetailedReactHTMLElement<any, HTMLElement>,
-					{ onClick: modal.open }
+					{ onClick: modal.open },
 				)}
 			</>
 		);

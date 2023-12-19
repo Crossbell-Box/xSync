@@ -10,7 +10,7 @@ import { openModal } from "@mantine/modals";
 
 export function Modal({
 	children,
-	confirmText,
+	confirmText: _,
 	confirmType,
 	onConfirm = () => {},
 	...props
@@ -57,7 +57,7 @@ export function Modal({
 }
 
 export function openBorderlessModal(
-	options: Parameters<typeof openModal>["0"]
+	options: Parameters<typeof openModal>["0"],
 ) {
 	return openModal({
 		styles: { content: { background: "transparent" } },

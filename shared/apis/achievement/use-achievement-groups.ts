@@ -21,7 +21,7 @@ const SCOPE_KEY = ["indexer", "achievement"];
 
 const SCOPE_KEY_ACHIEVEMENT_GROUP = (
 	characterId?: number,
-	levelId?: AchievementLevel["id"]
+	levelId?: AchievementLevel["id"],
 ) => compact([...SCOPE_KEY, "group", characterId, levelId]);
 
 const statusMap: Record<AchievementItem["status"], AchievementLevelStatus> = {
@@ -32,7 +32,7 @@ const statusMap: Record<AchievementItem["status"], AchievementLevelStatus> = {
 
 export function useMintAchievement(
 	characterId: number,
-	levelId: AchievementLevel["id"]
+	levelId: AchievementLevel["id"],
 ) {
 	const queryClient = useQueryClient();
 
@@ -43,28 +43,28 @@ export function useMintAchievement(
 			onSuccess: (data) => {
 				if (data) {
 					return queryClient.invalidateQueries(
-						SCOPE_KEY_ACHIEVEMENT_GROUP(characterId)
+						SCOPE_KEY_ACHIEVEMENT_GROUP(characterId),
 					);
 				}
 			},
-		}
+		},
 	);
 }
 
 export function useAchievementGroups(
-	character?: CharacterEntity | null
+	character?: CharacterEntity | null,
 ): [AchievementGroup[], QueryStatus] {
 	const characterId = character?.characterId;
 
 	const { data, status } = useQuery(
 		SCOPE_KEY_ACHIEVEMENT_GROUP(characterId),
 		() => indexer.getAchievements(characterId!),
-		{ enabled: !!characterId }
+		{ enabled: !!characterId },
 	);
 
 	const groups = React.useMemo(
 		() => formatData(data, character),
-		[data, character]
+		[data, character],
 	);
 
 	return [groups, status];
@@ -72,7 +72,7 @@ export function useAchievementGroups(
 
 function formatData(
 	data?: Awaited<ReturnType<Indexer["getAchievements"]>> | null,
-	character?: CharacterEntity | null
+	character?: CharacterEntity | null,
 ): AchievementGroup[] {
 	return (
 		data?.list.map(
@@ -99,11 +99,11 @@ function formatData(
 								mintedAt: rawLevel.mintedAt,
 								ownerHandle: character?.handle ?? "",
 								transactionHash: rawLevel.transactionHash,
-							})
+							}),
 						),
-					})
+					}),
 				),
-			})
+			}),
 		) ?? []
 	);
 }

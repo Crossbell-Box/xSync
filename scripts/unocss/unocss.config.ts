@@ -11,7 +11,7 @@ export default {
 			collections: {
 				csb: FileSystemIconLoader(
 					path.join(__dirname, "./icons"),
-					(svg) => svg
+					(svg) => svg,
 				),
 				// Usage example: <Text className="i-csb:back" />
 			},

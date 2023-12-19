@@ -68,7 +68,7 @@ export function PlatformCard({
 	const syncAccount = useSyncAccount(
 		character?.characterId,
 		platform,
-		identity!
+		identity!,
 	);
 
 	const platformUrl = identity
@@ -85,7 +85,7 @@ export function PlatformCard({
 			<div
 				className={classNames(
 					"absolute z-1 top-40px -right-20px flex",
-					disableBtn && "grayscale-80 brightness-160"
+					disableBtn && "grayscale-80 brightness-160",
 				)}
 			>
 				<button
@@ -97,7 +97,7 @@ export function PlatformCard({
 							: "cursor-pointer transition hover:opacity-90 active:opacity-100",
 						isBound
 							? "bg-[#DAE2FF] text-blue-primary"
-							: "bg-blue-primary text-white"
+							: "bg-blue-primary text-white",
 					)}
 					disabled={disableBtn}
 					onClick={() => {
@@ -160,7 +160,7 @@ export function PlatformCard({
 							href={platformUrl}
 							className={classNames(
 								"font-500 text-black text-16px leading-24px tracking-0.15px overflow-hidden text-ellipsis flex-1 whitespace-nowrap",
-								!identity && "opacity-50"
+								!identity && "opacity-50",
 							)}
 							target="_blank"
 							rel="noreferrer"
@@ -174,7 +174,7 @@ export function PlatformCard({
 								<button
 									className={classNames(
 										"w-16px h-16px text-blue-primary bg-[#E4EAFD] cursor-pointer border-none p-0 rounded-4px flex items-center justify-center",
-										"transition hover:opacity-90 active:opacity-100 disabled:opacity-60 disabled:cursor-not-allowed"
+										"transition hover:opacity-90 active:opacity-100 disabled:opacity-60 disabled:cursor-not-allowed",
 									)}
 									disabled={syncAccount.isLoading}
 									onClick={() => {
@@ -184,7 +184,7 @@ export function PlatformCard({
 													showNotification({
 														title: data.message,
 														message: `Next sync will be at ${formatDate(
-															data.result?.next_update
+															data.result?.next_update,
 														)}`,
 														color: "green",
 													});
@@ -196,7 +196,7 @@ export function PlatformCard({
 									<Text
 										className={classNames(
 											"i-csb:arrow-circlepath text-16px",
-											syncAccount.isLoading && "animate-spin animate-reverse"
+											syncAccount.isLoading && "animate-spin animate-reverse",
 										)}
 									/>
 								</button>

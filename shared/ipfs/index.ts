@@ -1,6 +1,6 @@
 export const ipfsLinkToHttpLink = (
 	rawLink: string,
-	config?: { origin?: string | null }
+	config?: { origin?: string | null },
 ): string => {
 	if (!rawLink) {
 		return "";

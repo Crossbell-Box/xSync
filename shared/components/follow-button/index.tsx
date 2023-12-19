@@ -26,7 +26,7 @@ export function FollowButton({
 	const { data: followRelation, isLoadingFollowRelation } =
 		useCharacterFollowRelation(
 			currentCharacter?.characterId,
-			character?.characterId
+			character?.characterId,
 		);
 
 	const follow = useFollowCharacter();

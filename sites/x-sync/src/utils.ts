@@ -7,7 +7,7 @@ import {
 export function sumUpMediaUsage(
 	mediaUsage?: NonNullable<
 		ReturnType<typeof useCharacterBoundAccounts>["data"]
-	>[number]["media_usage"]
+	>[number]["media_usage"],
 ) {
 	if (!mediaUsage) {
 		return 0;
@@ -20,7 +20,7 @@ export function sumUpMediaUsage(
 
 export function getChangeBioUrl(
 	platform: SupportedPlatform,
-	identity: string
+	identity: string,
 ): string {
 	switch (platform) {
 		case "medium":
@@ -44,7 +44,7 @@ export function getChangeBioUrl(
 
 export function openWindowToChangeBio(
 	platform: SupportedPlatform,
-	identity: string
+	identity: string,
 ) {
 	return window.open(getChangeBioUrl(platform, identity), "_blank");
 }

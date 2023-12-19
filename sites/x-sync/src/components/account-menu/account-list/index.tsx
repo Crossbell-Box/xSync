@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollArea, LoadingOverlay, Text } from "@mantine/core";
+import { LoadingOverlay, Text } from "@mantine/core";
 import { useModals } from "@mantine/modals";
 import { showNotification } from "@mantine/notifications";
 
@@ -25,7 +25,7 @@ export function AccountList() {
 	const hasNoResult = !isLoading && characters.length === 0;
 
 	return (
-		<ScrollArea.Autosize mah="50vh">
+		<div className="max-h-[50vh] overflow-y-auto">
 			{isLoading && (
 				<div className="h-100px">
 					<LoadingOverlay visible={isLoading} />
@@ -65,7 +65,7 @@ export function AccountList() {
 						<div
 							className={classNames(
 								"flex items-center gap-[8px] w-full",
-								isSelected ? "text-[#5B89F7]" : "text-[#082135]"
+								isSelected ? "text-[#5B89F7]" : "text-[#082135]",
 							)}
 							key={character.characterId}
 						>
@@ -74,7 +74,7 @@ export function AccountList() {
 								<div
 									className={classNames(
 										"rounded-full border-3 border-[#5B89F7] absolute inset-0",
-										isSelected ? "opacity-100" : "opacity-0"
+										isSelected ? "opacity-100" : "opacity-0",
 									)}
 								/>
 							</div>
@@ -103,7 +103,7 @@ export function AccountList() {
 								xmlns="http://www.w3.org/2000/svg"
 								className={classNames(
 									"ml-auto mr-12px sm:hidden",
-									isSelected ? "opacity-100" : "opacity-0"
+									isSelected ? "opacity-100" : "opacity-0",
 								)}
 							>
 								<g clipPath="url(#clip0_5191_20475)">
@@ -137,6 +137,6 @@ export function AccountList() {
 					<Text color="dimmed">No characters</Text>
 				</div>
 			)}
-		</ScrollArea.Autosize>
+		</div>
 	);
 }

@@ -7,7 +7,7 @@ import {
 } from "./types";
 
 export function useAchievementsStatus(
-	achievements: AchievementInfo[]
+	achievements: AchievementInfo[],
 ): AchievementsStatus {
 	return React.useMemo(() => {
 		let ableToMintCount = 0;

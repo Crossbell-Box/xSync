@@ -82,7 +82,7 @@ export function GuideModal() {
 									"w-4px h-4px rounded-full mx-4px transform transition",
 									i === state.currentIndex
 										? "scale-200 bg-black/40"
-										: "scale-100 bg-black/20"
+										: "scale-100 bg-black/20",
 								)}
 							/>
 						))}

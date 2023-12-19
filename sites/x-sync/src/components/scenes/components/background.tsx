@@ -19,7 +19,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 54,
 								width: 180,
 								height: 180,
-						  }
+							}
 						: {
 								top: percentage(286 / 900),
 								left: percentage(263 / 1440),
@@ -27,7 +27,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 27,
 								width: 90,
 								height: 90,
-						  }
+							}
 				}
 			>
 				<Image
@@ -47,7 +47,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 36,
 								width: 120,
 								height: 120,
-						  }
+							}
 						: {
 								top: percentage(295 / 900),
 								left: percentage(492 / 1440),
@@ -55,7 +55,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 18,
 								width: 60,
 								height: 60,
-						  }
+							}
 				}
 			>
 				<Image
@@ -75,7 +75,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 18,
 								width: 60,
 								height: 60,
-						  }
+							}
 						: {
 								top: percentage(415 / 900),
 								left: percentage(408 / 1440),
@@ -83,7 +83,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 9,
 								width: 30,
 								height: 30,
-						  }
+							}
 				}
 			>
 				<Image
@@ -103,7 +103,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 24,
 								width: 80,
 								height: 80,
-						  }
+							}
 						: {
 								top: percentage(451 / 900),
 								left: percentage(290 / 1440),
@@ -111,7 +111,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 12,
 								width: 40,
 								height: 40,
-						  }
+							}
 				}
 			>
 				<Image src="/images/sync/platform-icons/medium.svg" alt="Medium Icon" />
@@ -128,7 +128,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 24,
 								width: 80,
 								height: 80,
-						  }
+							}
 						: {
 								rotate: "-15deg",
 								top: percentage(511 / 900),
@@ -136,7 +136,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 12,
 								width: 40,
 								height: 40,
-						  }
+							}
 				}
 			>
 				<Image
@@ -156,7 +156,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 54,
 								width: 180,
 								height: 180,
-						  }
+							}
 						: {
 								rotate: "30deg",
 								top: percentage(437 / 900),
@@ -164,7 +164,7 @@ export const Background = ({ isActive }: BackgroundProps) => (
 								borderRadius: 27,
 								width: 90,
 								height: 90,
-						  }
+							}
 				}
 			>
 				<Image src="/images/sync/platform-icons/tiktok.svg" alt="Tiktok Icon" />

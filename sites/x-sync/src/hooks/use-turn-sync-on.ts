@@ -45,14 +45,14 @@ export function useTurnSyncOn() {
 
 function useAutoTurnOn(
 	characterId: number | undefined,
-	turnSyncOn: () => void
+	turnSyncOn: () => void,
 ) {
 	const autoTurnOnRef = React.useRef(false);
 	const { data: isActivated, isLoading: isActivationLoading } =
 		useCharacterActivation(characterId);
 
 	const needAutoTurnOnAfterConnect = useRefCallback(
-		() => (autoTurnOnRef.current = true)
+		() => (autoTurnOnRef.current = true),
 	);
 
 	React.useEffect(() => {

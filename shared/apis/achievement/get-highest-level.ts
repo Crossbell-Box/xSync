@@ -6,7 +6,7 @@ import {
 
 export function getHighestLevel(
 	levels: AchievementInfo["levels"],
-	filter: AchievementLevelStatus[]
+	filter: AchievementLevelStatus[],
 ): AchievementLevel | null {
 	for (let i = levels.length; i > 0; i--) {
 		const level = levels[i - 1];

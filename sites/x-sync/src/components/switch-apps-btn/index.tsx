@@ -17,7 +17,7 @@ import { useMediaQuery } from "@mantine/hooks";
 
 const cls = {
 	app: classNames(
-		"flex flex-col items-center px-2 py-1 rounded-md hover:underline cursor-pointer"
+		"flex flex-col items-center px-2 py-1 rounded-md hover:underline cursor-pointer",
 	),
 	logo: classNames("w-36px h-36px"),
 	logoTitle: classNames("font-deca font-600 text-14px truncate"),

@@ -29,7 +29,7 @@ import { useUnbindModalState } from "./unbind-modal.state";
 
 export function openUnbindingModal(
 	platform: SupportedPlatform,
-	identity: string
+	identity: string,
 ) {
 	openConfirmModal({
 		title: `Unbind`,
@@ -38,7 +38,7 @@ export function openUnbindingModal(
 			title: "text-24px font-400 leading-32px",
 		},
 		children: `Are you sure you'd like to stop syncing your ${getPlatformDisplayName(
-			platform
+			platform,
 		)} content?`,
 		labels: { confirm: "I've decided", cancel: "Cancel" },
 		confirmProps: { color: "red", variant: "subtle" },
@@ -127,7 +127,7 @@ export function UnbindingModal() {
 											className={classNames(
 												"h-full border border-1 border-[#E1E8F7] rounded-r-8px bg-[#FAFCFF] outline-none",
 												"text-14px leading-20px font-500 font-roboto text-blue-primary cursor-pointer p-12px",
-												"flex items-center justify-center"
+												"flex items-center justify-center",
 											)}
 											onClick={() =>
 												openWindowToChangeBio(meta.platform, meta.identity)

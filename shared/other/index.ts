@@ -6,7 +6,7 @@ export const copyToClipboard = async (
 		showNotification = false,
 	}: {
 		showNotification?: boolean;
-	} = {}
+	} = {},
 ) => {
 	await navigator.clipboard.writeText(text);
 

@@ -13,7 +13,7 @@ export function CircleBtn({
 }: CircleBtnProps) {
 	const style = React.useMemo(
 		(): React.CSSProperties => ({ width: size, height: size, ...style_ }),
-		[size, style_]
+		[size, style_],
 	);
 
 	return (
@@ -23,7 +23,7 @@ export function CircleBtn({
 				"flex items-center justify-center rounded-full cursor-pointer transition",
 				"text-[#A9B4CF] border border-solid border-1 border-[#E1E8F7] backdrop-filter backdrop-blur-7.5px",
 				"bg-[#E1E8F7] bg-opacity-30 hover:bg-opacity-40 active:bg-opacity-60",
-				className
+				className,
 			)}
 			style={style}
 		/>

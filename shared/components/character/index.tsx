@@ -23,7 +23,7 @@ export function CharacterName({
 		characterId ?? initialCharacter?.characterId,
 		{
 			initialData: initialCharacter,
-		}
+		},
 	);
 
 	const characterName = extractCharacterName(data);
@@ -67,14 +67,14 @@ export function CharacterHandle({
 		characterId ?? initialCharacter?.characterId,
 		{
 			initialData: initialCharacter,
-		}
+		},
 	);
 
 	const { data: data2, isLoading: isLoading2 } = useCharacterByHandle(
 		handle ?? initialCharacter?.handle,
 		{
 			initialData: initialCharacter,
-		}
+		},
 	);
 
 	const data = data1 ?? data2;

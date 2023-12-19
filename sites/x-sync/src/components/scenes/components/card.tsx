@@ -40,7 +40,7 @@ export function Card({ index, total, children, onStart }: CardProps) {
 							key={i}
 							className={classNames(
 								"w-4px h-4px rounded-full mx-4px transform transition",
-								i === index ? "scale-200 bg-black/40" : "scale-100 bg-black/20"
+								i === index ? "scale-200 bg-black/40" : "scale-100 bg-black/20",
 							)}
 						/>
 					))}
@@ -49,7 +49,7 @@ export function Card({ index, total, children, onStart }: CardProps) {
 					onClick={onStart}
 					className={classNames(
 						"mt-28px border-none text-white w-full h-60px rounded-12px text-18px font-700 leading-21px flex items-center justify-end px-20px relative",
-						"cursor-pointer bg-blue-primary hover:bg-blue-primary/90 active:bg-blue-primary/100"
+						"cursor-pointer bg-blue-primary hover:bg-blue-primary/90 active:bg-blue-primary/100",
 					)}
 				>
 					<div className="absolute left-16px bottom-0 w-100px h-100px overflow-hidden">

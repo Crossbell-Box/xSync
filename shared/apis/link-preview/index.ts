@@ -14,6 +14,6 @@ export function useLinkPreview(link: string | undefined) {
 			enabled: Boolean(link),
 			refetchOnWindowFocus: false,
 			refetchOnMount: false,
-		}
+		},
 	);
 }

@@ -45,7 +45,7 @@ const tooltipZIndex = modalZIndex + 1;
 export function openBindingModal(
 	platform: SupportedPlatform,
 	contract: Contract,
-	address: Address | null
+	address: Address | null,
 ) {
 	openBorderlessModal({
 		zIndex: modalZIndex,
@@ -151,7 +151,7 @@ function BindingModal({ platform }: { platform: SupportedPlatform }) {
 									<button
 										className={classNames(
 											"absolute right-0 top-0 transform -translate-y-1/2 translate-x-full",
-											"text-16px bg-transparent border-none outline-none color-black p-0 cursor-pointer"
+											"text-16px bg-transparent border-none outline-none color-black p-0 cursor-pointer",
 										)}
 									>
 										<Text className="i-csb:circle-help" />
@@ -180,7 +180,7 @@ function BindingModal({ platform }: { platform: SupportedPlatform }) {
 						<p
 							className={classNames(
 								"text-12px leading-16px font-400 text-[#7D8CA3] mb-15px",
-								username ? "opacity-100" : "opacity-0"
+								username ? "opacity-100" : "opacity-0",
 							)}
 						>
 							{"Is this you? "}
@@ -215,7 +215,7 @@ function BindingModal({ platform }: { platform: SupportedPlatform }) {
 									<button
 										className={classNames(
 											"absolute transform -translate-y-1/10 translate-x-0",
-											"text-16px bg-transparent border-none outline-none color-black p-0 cursor-pointer"
+											"text-16px bg-transparent border-none outline-none color-black p-0 cursor-pointer",
 										)}
 									>
 										<Text className="i-csb:circle-help" />
@@ -238,7 +238,7 @@ function BindingModal({ platform }: { platform: SupportedPlatform }) {
 									"h-full border border-1 border-[#E1E8F7] rounded-r-8px bg-[#FAFCFF] outline-none",
 									"text-14px leading-20px font-500 font-roboto text-blue-primary cursor-pointer p-12px",
 									"flex items-center justify-center",
-									"filter disabled:grayscale disabled:opacity-60 disabled:cursor-not-allowed"
+									"filter disabled:grayscale disabled:opacity-60 disabled:cursor-not-allowed",
 								)}
 								onClick={() =>
 									copyHandle().then(() => {
@@ -323,7 +323,7 @@ function BindingModal({ platform }: { platform: SupportedPlatform }) {
 
 function normalizedUsername(
 	platform: SupportedPlatform,
-	username: string
+	username: string,
 ): string {
 	switch (platform) {
 		case "tg_channel":

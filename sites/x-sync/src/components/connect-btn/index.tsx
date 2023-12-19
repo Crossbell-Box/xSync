@@ -20,7 +20,7 @@ export function ConnectBtn() {
 	if (account) {
 		const avatar = ipfsLinkToHttpLink(
 			extractCharacterAvatar(account.character) ??
-				getDefaultAvatarIpfsUrl(account.character?.handle)
+				getDefaultAvatarIpfsUrl(account.character?.handle),
 		);
 
 		const address =
@@ -46,7 +46,7 @@ export function ConnectBtn() {
 			<button
 				className={classNames(
 					"outline-none bg-[#000] text-[#FFF] font-400 text-18px px-24px py-12px rounded-12px border-none cursor-pointer transform active:translate-y-1px",
-					ssrReady ? "opacity-100" : "opacity-0"
+					ssrReady ? "opacity-100" : "opacity-0",
 				)}
 				onClick={connectModal.show}
 			>

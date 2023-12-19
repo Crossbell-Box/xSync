@@ -20,7 +20,7 @@ export default function CharacterHoverCard({
 
 	const { data: followStats } = useCharacterFollowStats(
 		character?.characterId,
-		{ enabled: Boolean(character) && opened }
+		{ enabled: Boolean(character) && opened },
 	);
 
 	if (!character || !showHoverCard) return <>{children}</>;

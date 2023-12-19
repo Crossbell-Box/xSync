@@ -20,7 +20,7 @@ import seeYouImage from "@/public/images/sync/see-you-later.svg";
 
 export async function openRemoveOperatorModal(
 	contract: Contract,
-	address: Address | null
+	address: Address | null,
 ) {
 	return new Promise<void>((resolve) =>
 		openBorderlessModal({
@@ -36,7 +36,7 @@ export async function openRemoveOperatorModal(
 			onClose() {
 				resolve();
 			},
-		})
+		}),
 	);
 }
 
@@ -51,7 +51,7 @@ const closeModals = () => closeAllModals();
 export function RemoveOperatorModal() {
 	const character = useAccountCharacter();
 	const { data: boundAccounts = [] } = useCharacterBoundAccounts(
-		character?.characterId
+		character?.characterId,
 	);
 	const [scene, setScene] = React.useState(Scene.wannaRemoveTips);
 

@@ -5,11 +5,14 @@ import { SceneConfig } from "../types";
 export function useSceneState(scenes: SceneConfig[]) {
 	const idToSceneMap = React.useMemo(
 		() =>
-			scenes.reduce((map, scene) => {
-				map[scene.id] = scene;
-				return map;
-			}, {} as Record<SceneConfig["id"], SceneConfig>),
-		[scenes]
+			scenes.reduce(
+				(map, scene) => {
+					map[scene.id] = scene;
+					return map;
+				},
+				{} as Record<SceneConfig["id"], SceneConfig>,
+			),
+		[scenes],
 	);
 
 	const [currentIndex, setCurrentIndex] = React.useState(0);

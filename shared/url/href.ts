@@ -45,7 +45,7 @@ export const composeXCharHref = (handle?: string) => {
 
 export const composeCharacterFollowHref = (
 	handle: string,
-	type: "following" | "followers"
+	type: "following" | "followers",
 ) => {
 	if (!handle.startsWith("@")) {
 		handle = `@${handle}`;
@@ -70,7 +70,7 @@ export const composeWalletCharacterEditHref = (characterId: number) => {
  */
 export const composeSearchHref = (
 	q: string,
-	type: "all" | "characters" | "treasures" | "notes" = "all"
+	type: "all" | "characters" | "treasures" | "notes" = "all",
 ) => {
 	return `/search?q=${encodeURIComponent(q)}&f=${type}`;
 };

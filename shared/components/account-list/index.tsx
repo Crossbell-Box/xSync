@@ -76,7 +76,7 @@ export function AccountList({ itemClassName }: AccountListProps) {
 								character={character}
 								className={classNames(
 									character.characterId === account?.characterId &&
-										"border-2px border-[#FFCF55]"
+										"border-2px border-[#FFCF55]",
 								)}
 							/>
 						)}

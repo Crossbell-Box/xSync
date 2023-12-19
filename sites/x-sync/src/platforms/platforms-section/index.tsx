@@ -40,7 +40,7 @@ const ICON_MAP: Record<SupportedPlatform, StaticImageData> = {
 export default function PlatformsSection() {
 	const character = useAccountCharacter();
 	const { data: boundAccounts, isLoading } = useCharacterBoundAccounts(
-		character?.characterId
+		character?.characterId,
 	);
 
 	const boundPlatforms =
